@@ -50,7 +50,7 @@ public class checkChromeVerMobiles implements Runnable {
             driver = new AndroidDriver(new URL(URLs), desiredCapabilities);
             driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
             driver.get("https://www.whatismybrowser.com");
-            System.out.println(jobj.get("device")+" : "+driver.findElement(By.xpath("//*[@class='string-major']/div")).getText()+" : "+jobj.get("os_version"));
+            System.out.println(jobj.get("device")+" : "+driver.findElement(By.xpath("//div[@class='string-major']/a")).getText()+" : "+jobj.get("os_version"));
             driver.quit();
         } catch (Exception e) {
             e.printStackTrace();
